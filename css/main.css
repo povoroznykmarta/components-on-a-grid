@@ -8,6 +8,19 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr;
+  background-color: #f2f1ed;
+  margin: 0;
+  grid-template-areas:
+    "banner banner"
+    "main main";
+  gap: 1rem;
+  padding: 1rem;
+}
+
 img {
   width: 100%;
 }
@@ -15,4 +28,40 @@ img {
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
+}
+
+li, h2 {
+  font-family: "Patue One", sans-serif;
+}
+
+.logo{
+  width: 14rem;
+  z-index: 1;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: end;
+}
+
+a {
+  font-size: 2rem;
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  color: #30658d;
+}
+
+nav {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+
 }
